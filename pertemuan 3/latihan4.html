@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+  text-align: center;
+}
+
+ .kiri{
+  background-color: green;
+  width: 20%;
+  float: left;
+  padding:20px;
+ 
+}
+.utama {
+  background-color: red;
+  width: 60%;
+  float: left;
+  padding:20px;
+}
+
+.kanan{
+    background-color: yellow;
+	 width: 20%;
+	 float: left;
+	 padding:20px;
+}
+
+@media only screen and (max-width: 800px){
+    .kiri, .utama, .kanan {
+   	 width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+<h3>Demo Desain web responsive</h3>
+<p>Perkecil halaman browser anda hingga berukuran 800px</p>
+<div class="kiri">Bagian Kiri</div>
+<div class="utama">Bagian Utama</div>
+<div class="kanan">Bagian Kanan</div>
+</body>
+</html>
