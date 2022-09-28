@@ -5,4 +5,7 @@
     <li>
         <a style="color: #08f26e;" href="https://github.com/jaleisme/PPAW/tree/main/pertemuan%202">Pertemuan 2</a>
     </li>
+    <li>
+        <a style="color: #08f26e;" href="https://github.com/jaleisme/PPAW/tree/main/pertemuan%203">Pertemuan 3</a>
+    </li>
 </ul>
