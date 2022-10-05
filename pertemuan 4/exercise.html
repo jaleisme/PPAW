@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript XII</title>
+</head>
+<body>
+    <sCript>
+        const cafe = {
+            name: "Baratie",
+            businessHours: {
+                open: "10:00",
+                close: "20:00"
+            },
+            menus: ["Seafood Risotto", "Sea King Meat", "Marine Curry"]
+        }
+
+        console.log(cafe.name)
+        console.log("Open from", cafe.businessHours.open, "until", cafe.businessHours.close)
+        console.log("--- MENU ---")
+        for (let i = 0; i < cafe.menus.length; i++) {
+            console.log(cafe.menus[i])
+        }
+    </sCript>
+</body>
+</html>
