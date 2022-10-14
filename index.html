@@ -395,9 +395,9 @@
 
             $(document).ready(()=>{
                 // Prevent right click
-                // $(document).bind("contextmenu",function(e){
-                //     return false;
-                // });
+                $(document).bind("contextmenu",function(e){
+                    return false;
+                });
 
                 // Submit Checking
                 $('.btn').click(()=>{
