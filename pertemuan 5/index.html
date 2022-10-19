@@ -8,6 +8,14 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
         <style>
+            body{
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                -o-user-select: none;
+                user-select: none;
+            }
             .fill{
                 background-color: #ffffff;
                 border: 2px solid #272727;
@@ -28,6 +36,9 @@
                 width: 100%;
                 text-align: center;
                 color: white;
+            }
+            .swal2-popup {
+                font-size: 10px !important;
             }
         </style>
         <title>Jale's Crosswords</title>
@@ -51,10 +62,14 @@
                         <li>2. Ngaji Al-Qur'an</li>
                         <li>3. Hari Kemenangan</li>
                     </ul>
+                    <div class="d-flex">
+                        <p class="font-weight-bolder">Jawaban Benar: <span id="true-counter">0</span></p>
+                        <p class="font-weight-bolder ml-5">Jawaban Salah: <span id="false-counter">0</span></p>
+                    </div>
                 </div>
 
                 <!-- TABLE -->
-                <div class="col-6">
+                <div class="col-6" onmousedown='return false;' onselectstart='return false;'>
                     <!-- ROW 1 -->
                     <div class="row" id="row-1">
                         <div class="col-1 p-0 void"></div>
@@ -83,26 +98,26 @@
                         <div class="col-1 p-0 void"></div>
                         <div class="col-1 p-0 fill">
                             <span class="num-id">2</span>
-                            <span class="wr wr-2-me">T</span>
+                            <span class="wr wr-2-md wr-2-me">T</span>
                         </div>
                         <div class="col-1 p-0 fill">
-                            <span class="wr wr-2-me">A</span>
+                            <span class="wr wr-2-md">A</span>
                         </div>
                         <div class="col-1 p-0 fill">
-                            <span class="wr wr-2-me">R</span>
+                            <span class="wr wr-2-md">R</span>
                         </div>
                         <div class="col-1 p-0 fill">
-                            <span class="wr wr-2-me wr-1">A</span>
+                            <span class="wr wr-2-md wr-1">A</span>
                         </div>
                         <div class="col-1 p-0 fill">
-                            <span class="wr wr-2-me">W</span>
+                            <span class="wr wr-2-md">W</span>
                         </div>
                         <div class="col-1 p-0 fill">
                             <span class="num-id">3</span>
-                            <span class="wr wr-2-me">E</span>
+                            <span class="wr wr-2-md wr-3">E</span>
                         </div>
                         <div class="col-1 p-0 fill">
-                            <span class="wr wr-2-me">H</span>
+                            <span class="wr wr-2-md">H</span>
                         </div>
                         <div class="col-1 p-0 void"></div>
                         <div class="col-1 p-0 void"></div>
@@ -118,7 +133,7 @@
                         <div class="col-1 p-0 void"></div>
                         <div class="col-1 p-0 void"></div>
                         <div class="col-1 p-0 fill">
-                            <span class="wr wr-2-md">A</span>
+                            <span class="wr wr-2-me">A</span>
                         </div>
                         <div class="col-1 p-0 void"></div>
                         <div class="col-1 p-0 void"></div>
@@ -141,7 +156,7 @@
                         <div class="col-1 p-0 void"></div>
                         <div class="col-1 p-0 void"></div>
                         <div class="col-1 p-0 fill">
-                            <span class="wr wr-2-md">D</span>
+                            <span class="wr wr-2-me">D</span>
                         </div>
                         <div class="col-1 p-0 void"></div>
                         <div class="col-1 p-0 void"></div>
@@ -175,7 +190,7 @@
                             <span class="wr wr-4">D</span>
                         </div>
                         <div class="col-1 p-0 fill">
-                            <span class="wr wr-4">H</span>
+                            <span class="wr wr-4 wr-2-me">H</span>
                         </div>
                         <div class="col-1 p-0 fill">
                             <span class="wr wr-4">A</span>
@@ -200,7 +215,7 @@
                         <div class="col-1 p-0 void"></div>
                         <div class="col-1 p-0 void"></div>
                         <div class="col-1 p-0 fill">
-                            <span class="wr wr-2-md">R</span>
+                            <span class="wr wr-2-me">R</span>
                         </div>
                         <div class="col-1 p-0 void"></div>
                         <div class="col-1 p-0 void"></div>
@@ -228,7 +243,7 @@
                             <span class="wr wr-5">A</span>
                         </div>
                         <div class="col-1 p-0 fill">
-                            <span class="wr wr-5">U</span>
+                            <span class="wr wr-5 wr-2-me">U</span>
                         </div>
                         <div class="col-1 p-0 fill">
                             <span class="wr wr-5">S</span>
@@ -304,7 +319,7 @@
                             <span class="wr wr-6">U</span>
                         </div>
                         <div class="col-1 p-0 fill">
-                            <span class="wr wr-6">R</span>
+                            <span class="wr wr-6 wr-3">R</span>
                         </div>
                         <div class="col-1 p-0 void"></div>
                     </div>                 
@@ -318,15 +333,15 @@
                 </div>
                 <div class="col-3">
                     <select name="mode" id="select-mode" class="form-control">
-                        <option selected disabled>-- Pilih pertanyaan disini --</option>
+                        <option selected disabled class="bg-secondary text-white" value="choose">-- Pilih pertanyaan disini --</option>
+                        <option value="mode-2-md">2. Mendatar</option>
+                        <option value="mode-4">4. Mendatar</option>
+                        <option value="mode-5">5. Mendatar</option>
+                        <option value="mode-6">6. Mendatar</option>
+                        <option disabled>------------------</option>
                         <option value="mode-1">1. Menurun</option>
                         <option value="mode-2-me">2. Menurun</option>
                         <option value="mode-3">3. Menurun</option>
-                        <option disabled>------------------</option>
-                        <option value="mode-2-md">2. Mendatar</option>
-                        <option value="mode-2">4. Mendatar</option>
-                        <option value="mode-5">5. Mendatar</option>
-                        <option value="mode-6">6. Mendatar</option>
                     </select>  
                 </div>
                 <div class="col-7">
@@ -338,12 +353,53 @@
             </div>
         </div>
         <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
     
         <script>
-            let mode = '', answer = ''
+            let mode = '', answer = '', answeredTrue = 0, answeredFalse = 0
+            function callSwal(status = 'error', title = '', position = 'center', backdrop = true, width = '200px', text = '', timer = 800) {
+                Swal.fire({
+                    position: position,
+                    icon: status,
+                    title: title,
+                    showConfirmButton: false,
+                    timer: timer,
+                    backdrop: backdrop,
+                    width: width,
+                    text: text
+                })
+            }
+
+            function refreshCounter(){
+                $("#true-counter").text(answeredTrue)
+                $("#false-counter").text(answeredFalse)
+            }
+
+            function falseAnswer() {
+                callSwal('error', 'Jawaban Salah!', 'top', false)
+                answeredFalse += 1
+                refreshCounter()
+            }
+
+            function trueAnswer(selectedMode, editClass) {
+                $(editClass).attr('style', 'color:black')
+                $("#select-mode option[value='"+selectedMode+"']").attr("disabled","true").addClass('bg-secondary text-white')
+                $("#select-mode").prop('selectedIndex', 0)
+                $('#answer').val('')
+                callSwal('success', 'Jawaban Benar!', 'top', false)
+                answeredTrue += 1
+                refreshCounter()
+            }
+
             $(document).ready(()=>{
+                // Prevent right click
+                // $(document).bind("contextmenu",function(e){
+                //     return false;
+                // });
+
+                // Submit Checking
                 $('.btn').click(()=>{
                     mode = $('#select-mode').val()
                     answer = $('#answer').val().toUpperCase()
@@ -351,21 +407,66 @@
                     switch (mode) {
                         case 'mode-1':
                             if(answer === "TAKJIL"){
-                                $('.wr-1').attr('style', 'color:black')
+                                trueAnswer('mode-1', '.wr-1')
                             }else{
-                                alert("Jawaban salah!")
+                                falseAnswer()
                             }
                             break;
                             
                         case 'mode-2-me':
                             if(answer === "TADHRUS"){
-                                $('.wr-2-me').attr('style', 'color:black')
+                                trueAnswer('mode-2-me', '.wr-2-me')
                             }else{
-                                alert("Jawaban salah!")
+                                falseAnswer()
                             }
                             break;
-                        default:
+
+                        case 'mode-2-md':
+                            if(answer === "TARAWEH"){
+                                trueAnswer('mode-2-md', '.wr-2-md')
+                            }else{
+                                falseAnswer()
+                            }
                             break;
+
+                        case 'mode-3':
+                            if(answer === "EIDALFITR"){
+                                trueAnswer('mode-3', '.wr-3')
+                            }else{
+                                falseAnswer()
+                            }
+                            break;
+
+                        case 'mode-4':
+                            if(answer === "RAMADHA" || answer === "RAMADHAN"){
+                                trueAnswer('mode-4', '.wr-4')
+                            }else{
+                                falseAnswer()
+                            }
+                            break;
+
+                        case 'mode-5':
+                            if(answer === "HAUS"){
+                                trueAnswer('mode-5', '.wr-5')
+                            }else{
+                                falseAnswer()
+                            }
+                            break;
+
+                        case 'mode-6':
+                            if(answer === "SAHUR"){
+                                trueAnswer('mode-6', '.wr-6')
+                            }else{
+                                falseAnswer()
+                            }
+                            break;
+
+                        default:
+                            callSwal('question', "What's Happening?", 'center')
+                            break;
+                    }
+                    if(answeredTrue == 7){
+                        callSwal('success', "Congratulations!", 'center', true, '300px', "You've answered all the question.", 1500)
                     }
                 })
             })
