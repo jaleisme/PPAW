@@ -6,7 +6,7 @@
 # alias=Tony Tony Chopper&url=https://youtu.be/g4sU6XCtIUM&note=Chopper's Anthem
 
 # Retrieve all saved-links
-# GET https://jaleisme-paw-backend.netlify.app/saved-links
+GET https://jaleisme-paw-backend.netlify.app/saved-links
 
 # Retrieve single data (edit)
 # GET http://127.0.0.1:5001/saved-links/edit/awake-junglefowl
