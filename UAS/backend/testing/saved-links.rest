@@ -1,0 +1,23 @@
+# Create new saved-link
+# POST http://127.0.0.1:5001/saved-links/new
+# Content-Type: application/x-www-form-urlencoded
+# Accept: application/json
+
+# alias=Tony Tony Chopper&url=https://youtu.be/g4sU6XCtIUM&note=Chopper's Anthem
+
+# Retrieve all saved-links
+# GET http://127.0.0.1:5001/saved-links
+
+# Retrieve single data (edit)
+# GET http://127.0.0.1:5001/saved-links/edit/awake-junglefowl
+
+# Update existed saved-link
+# POST http://127.0.0.1:5001/saved-links/update/awake-junglefowl
+# Content-Type: application/x-www-form-urlencoded
+# Accept: application/json
+
+# alias=Tony Tony Chopper&url=https://youtu.be/g4sU6XCtIUM&note=Chopper's Legitimate Anthem
+
+
+# Delete data
+# GET http://127.0.0.1:5001/saved-links/remove/controversial-basilisk
