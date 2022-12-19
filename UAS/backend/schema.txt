@@ -1,0 +1,90 @@
+users
+- id
+- email
+- username
+- password
+
+shelf
+- id
+- shelf_name
+- location
+- description
+
+item_shelf
+- id
+- item_id
+- shelf_id
+
+item
+- id
+- name
+- description
+- image
+
+
+type
+- id
+- name
+
+item_type
+- id
+- item_id
+- type_id
+
+category
+- id
+- name
+
+item_categpry
+- id
+- item_id
+- category_id
+
+purchase_requisition_master
+- id
+- employee_id
+- submission_date
+- status [0:unread, 1: pending, 2: approved, 3: approved conditionally, 4:rejected]
+
+purchase_requisition_detail
+- id
+- pr_id
+- item_id
+- qty_submitted
+- qty_approved
+
+purchase_order_master
+- id
+- subtotal
+- tax
+- discount
+- total
+- note
+- status [0:unread, 1: pending, 2:requested, 3:sending, 4:received]
+
+purchase_order_detail
+- id
+- po_id
+- item_id
+- qty_bought
+- qty_arrived
+- base_price
+- subtotal
+
+borrowment_master
+- id
+- employee_id
+- start_date
+- end_date
+- note
+- status [0:unread; 1:approved; 2:approved conditionally; 3:rejected; 4:borrowed; 5:returned]
+
+borrowment_detail
+- id
+- item_id
+- qty_requested
+- qty_approved
+- qty_returned
+- condition_borrowed
+- condition_returned
+- status [0:unread; 1:approved; 2:rejected; 3:borrowed; 4:returned]

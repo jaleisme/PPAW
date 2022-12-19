@@ -1,6 +1,6 @@
 const express = require("express");
-const { uniqueNamesGenerator, adjectives, colors, animals } = require('unique-names-generator');
-const { db } = require("./db-config.js");
+// const { uniqueNamesGenerator, adjectives, colors, animals } = require('unique-names-generator');
+// const { db } = require("./db-config.js");
 const multer = require('multer');
 const app = express();
 const upload = multer(); 
@@ -20,7 +20,7 @@ app.use(express.static('public'));
 app.use(express.json());
 
 // Setting the app to listen on assigned port
-app.listen(port, () => console.log(`Server has started on port: ${port}\nhttp://localhost:${port}\n`));
+app.listen(port, "192.168.156.130");
 
 /** Saved-links Routes
  *  @saved-links                -> retrieve all data

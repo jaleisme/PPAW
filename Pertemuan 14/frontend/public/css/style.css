@@ -1,0 +1,210 @@
+body{
+    font-family: "Avenir Next";
+    margin:0;
+    padding: 0;
+}
+h1{
+    font-family: "Avenir Next";
+    font-size: 53px;
+    font-weight: 400;
+    color: deepskyblue;
+}
+h2,h3{
+    font-family: "Lato";
+    font-weight: 300;
+    color: #2b546a;
+}
+h3{
+    border-bottom: 1px solid #e1e6ec;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.header{
+    height: 60px;
+    border-bottom: 1px solid #eee;
+
+}
+.header-logo{
+    height: 60px;
+    width: 60px;
+    background-color: rgba(0,0,0,0.3);
+    float: left;
+    text-align: center;
+}
+
+.img-logo{
+    height: 60px;
+    width: 60px;
+    float: left;
+}
+.header-right{
+    float: right;
+    line-height: 60px;
+    padding: 0 20px;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.main-wrapper{
+    background-color: #f4fafa;
+}
+.main{
+    max-width: 1040px;
+    padding: 96px 96px;
+    margin: 0 auto;
+}
+
+.pokemon-container{
+    margin-top: 96px;
+}
+
+.pokemon-card{
+    display: inline-block;
+    width: 23%;
+    text-align: center;
+    box-shadow: 0 0 6px #e8e8e8;
+    margin-right: 20px;
+    background-color: #fff;
+    margin-top: 10px;
+}
+.pokemon-item{
+    border-radius: 4px;
+    padding: 48px 64px;
+}
+
+.pokemon-item img{
+    width: 120px;
+}
+
+.pokemon-item p{
+    color: #2b546a;
+    width: 120px;
+
+}
+
+.modal{
+    position: fixed;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+.modal-inner{
+    position: absolute;
+    top: 8%;
+    right: 0;
+    left: 0;
+    width: 300px;
+    background-color: whitesmoke;
+    padding-bottom: 20px;
+    border-radius: 8px;
+    margin: auto;
+}
+.modal-header{
+    height: 10px;
+    width: 100%;
+    background-image: url("https://backupjurnal.site/pwa/header.svg");
+}
+.modal-introduction{
+    padding: 0 20px;
+}
+.modal-introduction p{
+    display: block;
+    margin:10% 0%;
+    word-wrap: break-word;
+
+
+}
+.modal-close-btn{
+    padding: 8px 16px;
+    background-color: deepskyblue;
+    border: 0;
+    outline: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.modal-close-btn:hover{
+    background-color: #2b546a;
+    transition: .5s ease-in-out;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 80px;
+}
+.footer-list{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+.footer-list li{
+    padding-left: 12px;
+}
+.footer-logo img{
+    width:256px
+}
+
+.hubungikami-container{
+    margin-top: 96px;
+}
+.hubungiKamiForm p {
+    color: #8491a5;
+    margin-top: 32px;
+    margin-bottom: 8px;
+}
+
+.hubungiKamiForm input,
+.hubungiKamiForm textarea {
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #8491a5;
+    width: 440px;
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #bac6d3;
+    border-radius: 3px;
+    display: block;
+}
+
+.hubungiKamiForm input {
+    height: 48px;
+}
+
+.hubungiKamiForm textarea {
+    height: 184px;
+}
+
+.hubungiKamiForm input[type=submit] {
+    color: #fff;
+    width: 184px;
+    height: 48px;
+    font-size: 13px;
+    background-color: #30c8d6;
+    border: none;
+    margin-top: 32px;
+}
+
+.hubungiKamiForm input[type=submit]:hover {
+    cursor: pointer;
+}
+
+.hubungiKamiForm-submit-message {
+    box-sizing: border-box;
+    color: #16a48a;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    font-size: 20px;
+    background-color: rgba(48, 214, 184, 0.16);
+    border: 2px solid #30d6b8;
+    border-radius: 3px;
+}
+.hubungiKamiForm p.hubungikamiform-message-error {
+    color: #ff4d75;
+    margin-top: 8px;
+}
